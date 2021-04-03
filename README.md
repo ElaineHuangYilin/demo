@@ -38,4 +38,4 @@ https://github.com/mitmproxy/mitmproxy
 
 
 # Before test
-we should install MyObservatory from Hong Kong Observatory in test phone, the test will start from launching the app on real devices
+Assuming the app is already installed on the test phone, and the test will start from launching the app on real devices
