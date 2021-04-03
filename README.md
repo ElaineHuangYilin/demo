@@ -26,7 +26,7 @@ http://appium.io/docs/en/drivers/ios-xcuitest/index.html
 1. launch appium `appium` in console
 1. android: connect to real device  `adb connect xx.xx.xx.xx:5555`
 1. behave --lang zh-CN
-1. behave ./features/report_data/clothing_and_accessory.feature --lang zh-CN --tags=@wip --no-capture
+1. behave ./features/check_weather/check_9_day_forecast.feature --lang zh-CN --no-capture
 
 # appium desktop
 We can use appium desktop to find element and debug the tests. Ask Jerry/Operator to get the installer of appium desktop
@@ -35,3 +35,7 @@ https://github.com/appium/appium-desktop
 # mitmproxy
 We can use mitmproxy to capture API
 https://github.com/mitmproxy/mitmproxy
+
+
+# Before test
+we should install MyObservatory from Hong Kong Observatory in test phone, the test will start from launching the app on real devices
