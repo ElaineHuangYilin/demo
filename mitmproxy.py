@@ -18,7 +18,7 @@ def response(flow):
             data = {
                 'forecast_date': book.get('forecast_date'),
                 'max_rh': book.get('max_rh'),
-                'min_rh': book.get('min_rh')              
+                'min_rh': book.get('min_rh')
             }
             results.append(data)
             with open('forecast_detail_data.json', 'w') as file:

@@ -19,7 +19,7 @@ jobs:
         pip install -r requirements.txt
     - name: Lint with flake8
       run: |
-        pylint **/*.py
+        pylint ./mitmproxy.py
     - name: Lint with flake8
       run: |
         find features/ -iname "*.py" | xargs pylint 
