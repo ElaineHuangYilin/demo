@@ -1,13 +1,12 @@
 import os
 from behave import fixture
 from appium import webdriver
-print(os.getenv('IOS_XCODE_ORGID'))
+
 @fixture
 def observatory_driver(context):
     try:
         platform = os.getenv('PLATFORM')
         desired_caps = create_desired_caps(platform)
-        print(desired_caps)
         context.driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)
         yield context
     finally:
