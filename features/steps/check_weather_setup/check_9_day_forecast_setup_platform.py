@@ -40,18 +40,18 @@ class Check9DayforecastSetupIOS(Check9DayforecastSetupBase):
     def menu_left_side_pannel_ele(self):
         wait = WebDriverWait(self.driver, 30)
         return wait.until(EC.element_to_be_clickable(
-            (MobileBy.ACCESSIBILITY_ID, 'Menu, left side panel')))
+            (MobileBy.ACCESSIBILITY_ID, '目錄, 左邊彈出選單')))
 
     def forecast_ele(self):
         wait = WebDriverWait(self.driver, 30)
         return wait.until(EC.presence_of_element_located(
-            (MobileBy.ACCESSIBILITY_ID, '9-Day Forecast')))
+            (MobileBy.ACCESSIBILITY_ID, '九天预报')))
 
     def verify_tomorrow_weather(self):
         wait = WebDriverWait(self.driver, 30)
         today = datetime.date.today()
         tomorrow = (today + datetime.timedelta(days=1))
-        format_tomorrow = tomorrow.strftime("%Y/%m/%d")
+        format_tomorrow = tomorrow.strftime("%Y年%-m月%-d日")
 
         try:
             tomorrow_weather = wait.until(EC.presence_of_element_located(
