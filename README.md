@@ -38,4 +38,4 @@ https://github.com/mitmproxy/mitmproxy
 
 
 # Before test
-Assuming the app is already installed on the test phone, and the test will start from launching the app on real devices
+Assuming the app is already installed on the test phone, Language is set to Simplified Chinese, and the test will start from launching the app on real devices, 
