@@ -51,12 +51,12 @@ class Check9DayforecastSetupIOS(Check9DayforecastSetupBase):
         wait = WebDriverWait(self.driver, 30)
         today = datetime.date.today()
         tomorrow = (today + datetime.timedelta(days=1))
-        correct_style_tomorrow = tomorrow.strftime("%Y/%m/%d", tomorrow)
+        format_tomorrow = tomorrow.strftime("%Y/%m/%d")
 
         try:
             tomorrow_weather = wait.until(EC.presence_of_element_located(
                 (By.XPATH,
-                 '//XCUIElementTypeStaticText[starts-with(@name, '+correct_style_tomorrow+')]"]\
+                 '//XCUIElementTypeStaticText[starts-with(@name, '+format_tomorrow+')]"]\
                      /following-sibling::XCUIElementTypeStaticText[1]')))
 
             assert tomorrow_weather.get_attribute('name') is not None
